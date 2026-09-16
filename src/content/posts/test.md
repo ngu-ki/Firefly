@@ -1,10 +1,13 @@
 ---
 title: 笨蛋、测验、召唤兽
 published: 2026-09-16
-tags: [测试, 博客]
-category: 文章示例
-draft: true
-slug: false
+description: 第一篇文章
+image: api
+tags: [随笔]
+category: 日常
+draft: false
+pinned: false
+comment: true
 ---
 
 # 《笨蛋、测验、召唤兽》
