@@ -45,7 +45,7 @@ export const siteConfig: SiteConfig = {
 	title: "Nguki",
 
 	// 站点副标题
-	subtitle: "Nguki",
+	subtitle: "声音的记忆",
 
 	// 站点 URL
 	site_url: "https://nguki.com",
@@ -57,11 +57,11 @@ export const siteConfig: SiteConfig = {
 	// 站点关键词
 	keywords: [
 		"Nguki",
-		"Fuwari",
-		"Astro",
 		"ACGN",
+		"Astro",
+		"吴语",
 		"博客",
-		"技术博客",
+		"方言",
 		"静态博客",
 	],
 
@@ -262,13 +262,13 @@ export const siteConfig: SiteConfig = {
 	// ── Bilibili配置 ──────────────────────────────────
 	bilibili: {
 		// 你的 Bilibili 用户 UID
-		uid: "38932988",
+		uid: "43090",
 	},
 
 	// ── 番组计划bangumi配置 ──────────────────────────────────
 	bangumi: {
 		// Bangumi用户ID
-		userId: "1143164",
+		userId: "286022",
 		// 数据模式：static=构建时获取，dynamic=客户端实时获取
 		// static 模式在构建时获取数据并静态渲染，部署后数据不更新
 		// dynamic 模式在浏览器中实时请求 API，始终显示最新数据
@@ -292,7 +292,7 @@ export const siteConfig: SiteConfig = {
 	// ── VNDB配置 ──────────────────────────────────
 	vndb: {
 		// VNDB 用户 ID
-		userId: "u358128",
+		userId: "u362043",
 		// 数据模式：static=构建时获取，dynamic=客户端实时获取
 		// static 模式在构建时获取数据并静态渲染，部署后数据不更新
 		// dynamic 模式在浏览器中实时请求 API，始终显示最新数据
@@ -312,9 +312,9 @@ export const siteConfig: SiteConfig = {
 	// ── MyAnimeList配置 ──────────────────────────────────
 	mal: {
 		// MyAnimeList 用户名（列表需为公开状态，私密列表无法读取）
-		username: "cuteleaf",
+		username: "nguki",
 		// MyAnimeList Client ID，在 https://myanimelist.net/apiconfig 注册免费应用后获取
-		clientId: "	0ef34371450f9c6c809deaadec6aa8f3",
+		clientId: "	",
 		// MAL API 地址
 		apiUrl: "https://api.myanimelist.net/v2",
 		// 动画条目详情页地址，末尾需要带 /

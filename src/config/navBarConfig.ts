@@ -104,20 +104,20 @@ const getDynamicNavBarConfig = (): NavBarConfig => {
 		// 子菜单
 		children: [
 			{
-				name: "GitHub",
-				url: "https://github.com/CuteLeaf/Firefly",
+				name: "古音小镜·古音",
+				url: "http://www.kaom.net/ny_word.php",
 				external: true,
-				icon: "fa7-brands:github",
+				icon: "material-symbols:docs",
 			},
 			{
-				name: "Gitee",
-				url: "https://gitee.com/CuteLeaf/Firefly",
+				name: "古音小镜·域外音",
+				url: "http://www.kaom.net/si_yuwaiyin.php",
 				external: true,
-				icon: "fa7-brands:gitee",
+				icon: "material-symbols:docs",
 			},
 			{
-				name: "Firefly文档",
-				url: "https://docs-firefly.cuteleaf.cn",
+				name: "明清吴语词典",
+				url: "http://www.kaom.net/book_minqingwuyucidian.php",
 				external: true,
 				icon: "material-symbols:docs",
 			},
