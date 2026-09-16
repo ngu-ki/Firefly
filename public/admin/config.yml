@@ -1,0 +1,34 @@
+backend:
+  name: github
+  repo: ngu-ki/Firefly   # 例如 CuteLeaf/Firefly
+  branch: main                     # 如果默认分支是 master，改这里
+  base_url: https://nguki.com/
+  auth_endpoint: api/auth
+  # 上面这行会让 Decap 调用 https://你的域名/api/auth 开始 OAuth
+  # 后端回调地址则是 https://你的域名/api/auth/callback
+
+media_folder: "public/images"      # 上传的图片保存仓库位置
+public_folder: "/images"           # 文章里引用图片时使用的 URL 路径
+
+site_url: https://nguki.com/
+display_url: https://nguki.com/
+
+collections:
+  - name: posts
+    label: 文章
+    folder: "src/content/posts"
+    create: true
+    slug: "{{slug}}"
+    extension: md
+    fields:
+      - { label: 标题, name: title, widget: string }
+      - { label: 发布日期, name: published, widget: datetime, format: "YYYY-MM-DD" }
+      - { label: 描述, name: description, widget: string, required: false }
+      - { label: 封面图, name: image, widget: image, required: false }
+      - { label: 标签, name: tags, widget: list, default: [] }
+      - { label: 分类, name: category, widget: string, required: false }
+      - { label: 草稿, name: draft, widget: boolean, default: false }
+      - { label: 置顶, name: pinned, widget: boolean, default: false }
+      - { label: 允许评论, name: comment, widget: boolean, default: true }
+      - { label: 语言, name: lang, widget: string, default: "zh-CN", required: false }
+      - { label: 正文, name: body, widget: markdown }

@@ -52,7 +52,7 @@ export const siteConfig: SiteConfig = {
 
 	// 站点描述
 	description:
-		"这是我的个人网站。",
+		"这是我的个人网站",
 
 	// 站点关键词
 	keywords: [
