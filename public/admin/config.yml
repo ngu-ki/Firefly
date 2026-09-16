@@ -1,34 +1,105 @@
 backend:
   name: github
-  repo: ngu-ki/Firefly   # 例如 CuteLeaf/Firefly
-  branch: main                     # 如果默认分支是 master，改这里
-  base_url: https://nguki.com/
-  auth_endpoint: api/auth
-  # 上面这行会让 Decap 调用 https://你的域名/api/auth 开始 OAuth
-  # 后端回调地址则是 https://你的域名/api/auth/callback
+  branch: main
+  repo: ngu-ki/Firefly # 替换为您的静态网站仓库名
+  site_domain: http://nguki.com/ # 替换为您的静态网站域名
+  base_url: http://nguki.com/api/auth/callback # 替换为配置好的GitHub_oAuth后端网站链接(包含https协议头)
+  auth_endpoint: auth
 
-media_folder: "public/images"      # 上传的图片保存仓库位置
-public_folder: "/images"           # 文章里引用图片时使用的 URL 路径
+  # (可选项)自定义Decap-CMS每次操作的提交信息模板。
+  commit_messages:
+    create: "CMS:Create {{collection}} “{{slug}}”"
+    update: "CMS:Update {{collection}} “{{slug}}”"
+    delete: "CMS:Delete {{collection}} “{{slug}}”"
+    uploadMedia: "CMS:Upload “{{path}}”"
+    deleteMedia: "CMS:Delete “{{path}}”"
+    openAuthoring: "CMS:{{message}}"
 
-site_url: https://nguki.com/
-display_url: https://nguki.com/
+# Decap-CMS的首页logo
+logo_url: http://nguki.com/_astro/avatar.BcAu2wMi_yT6PR.webp
 
+# 您的网站地址链接(带HTTPS协议头)
+site_url: http://nguki.com/
+display_url: http://nguki.com/
+
+# 媒体文件夹，填写图片存放位置
+media_folder: "src/images/"
+# 引用路由补全，在Decap-CMS选择图片时自动补全的路径头。
+public_folder: "src/posts/"
+# 例如你的图片为 "img.png"，存放在 "src/images/"(媒体文件夹)下，文章为 "index.md"，而文章存放在 "src/posts/"下，那么这时候就要补全路径头为 "../images"
+
+# 文档夹(核心)
 collections:
-  - name: posts
-    label: 文章
-    folder: "src/content/posts"
-    create: true
-    slug: "{{slug}}"
-    extension: md
-    fields:
-      - { label: 标题, name: title, widget: string }
-      - { label: 发布日期, name: published, widget: datetime, format: "YYYY-MM-DD" }
-      - { label: 描述, name: description, widget: string, required: false }
-      - { label: 封面图, name: image, widget: image, required: false }
-      - { label: 标签, name: tags, widget: list, default: [] }
-      - { label: 分类, name: category, widget: string, required: false }
-      - { label: 草稿, name: draft, widget: boolean, default: false }
-      - { label: 置顶, name: pinned, widget: boolean, default: false }
-      - { label: 允许评论, name: comment, widget: boolean, default: true }
-      - { label: 语言, name: lang, widget: string, default: "zh-CN", required: false }
-      - { label: 正文, name: body, widget: markdown }
+
+  # 分类1(按名称"name"分类)
+  - name: "posts" # Used in routes, e.g., /admin/collections/blog
+    # 在Decap-CMS网页上的分类名称(只影响web的展示文字)
+    label: "Posts" # Used in the UI
+
+    # 填写文章位置
+    folder: "src/posts/" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template
+
+    # CMS编辑器预置项(按需调整)
+    fields: # The fields for each document, usually in front matter
+      - { label: "标题", name: "title", widget: "string" }
+      - {
+          label: "发布日期",
+          name: "published",
+          widget: "datetime",
+          format: "YYYY-MM-DD",
+        }
+      - {
+          label: "置顶",
+          name: "pinned",
+          widget: "boolean",
+          default: false,
+          required: false,
+        }
+      - {
+          label: "摘要",
+          name: "description",
+          widget: "string",
+          required: false,
+        }
+      - { label: "封面", name: "image", widget: "image", required: false }
+      - {
+          label: "标签",
+          name: "tags",
+          widget: "list",
+          minimize_collapsed: true,
+          required: false,
+        }
+      - { label: "分类", name: "categories", widget: "list", required: false }
+      - {
+          label: "草稿",
+          name: "draft",
+          widget: "boolean",
+          default: false,
+          required: false,
+        }
+      - {
+          label: "语言",
+          name: "lang",
+          widget: "string",
+          default: "",
+          required: false,
+        }
+      - { label: "正文", name: "body", widget: "markdown", required: false }
+
+  # 分类2
+  - name: "pages"
+    label: "Pages"
+    # 单文件陈列
+    files:
+      - file: "<your-pages-location-head>/about.md" # 替换为你的页面位置前缀
+        name: "about"
+        label: "关于"
+        fields:
+          - { label: "内容", name: "body", widget: "markdown", required: false }
+      - file: "<your-pages-location-head>/friends.md" # 替换为你的页面位置前缀
+        name: "friends"
+        label: "友链"
+        fields:
+          - { label: "内容", name: "body", widget: "markdown", required: false }
