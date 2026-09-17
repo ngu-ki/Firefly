@@ -1,25 +1,16 @@
 # 关于我 / About Me
 
-你好！我是 **夏叶** ，一个在数字世界中默默无闻的一片叶子。
+你好！我是 **木樨** ，一个对音韵学和二次元感兴趣的人。
 
 ## 🛠️ 关于本站
 
-这个网站使用 **Astro** 框架构建，采用了 [Firefly](https://github.com/CuteLeaf/Firefly) 模板，Firefly 是基于 [Fuwari](https://github.com/saicaca/fuwari) 的二次开发。
+这个网站叫 **Nguki** ,名字来源于吴语的“吴”和记忆的“记”。
 
-**Firefly** 是一款基于 Astro 框架和 Fuwari 模板开发的清新美观且现代化个人博客主题模板，专为技术爱好者和内容创作者设计。该主题融合了现代 Web 技术栈，提供了丰富的功能模块和高度可定制的界面，让您能够轻松打造出专业且美观的个人博客网站。
+**文字是传承。**
+2300年前，两个中山国人在石头上刻下文字，1935年才被农民挖掘出来，被释读出来的文字记录的不是公侯将相的事迹，而是“监罟有(囿)臣公乘得，守丘(其)臼(旧)(将)曼，敢谒后尗贤者”，我终于理解文字为什么是文明传承的核心载体。
 
-
-**🖥️在线预览： [Firefly - Demo site](https://firefly.cuteleaf.cn/)**
-
-**📝Firefly使用文档： [https://docs-firefly.cuteleaf.cn](https://docs-firefly.cuteleaf.cn/)**
-
-**⭐Firefly开源地址：[https://github.com/CuteLeaf/Firefly](https://github.com/CuteLeaf/Firefly)** 
-
-**⭐Fuwari开源地址：[https://github.com/saicaca/fuwari](https://github.com/saicaca/fuwari)**
-
-::github{repo="CuteLeaf/Firefly"}
-
-::github{repo="saicaca/fuwari"}
+**声音，也是记忆。** 
+文字是语言的记录符号，语言的物质表现形式是语音，一代又一代人把古老的声音传递了下来，把记忆传递下来，把文化传递下来。
 
 ---
 
