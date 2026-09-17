@@ -26,9 +26,9 @@ const pages = resolvePageToggles({
 	// 书签导航页面开关
 	booknav: true,
 	// 哔哩哔哩追番页面开关
-	bilibili: false,
+	bilibili: true,
 	// 番组计划页面开关
-	bangumi: true,
+	bangumi: false,
 	// VNDB页面开关
 	vndb: false,
 	// MyAnimeList页面开关
