@@ -68,17 +68,17 @@ export const backgroundWallpaper: BackgroundWallpaperConfig = {
 			// 是否启用主页横幅文字
 			enable: true,
 			// 主页横幅主标题
-			title: "Lovely firefly!",
+			title: "Sound is memory too!",
 			// 主页横幅主标题字体大小
 			titleSize: "4.5rem",
 			// 主页横幅副标题
 			subtitle: [
-				"In Reddened Chrysalis, I Once Rest",
-				"From Shattered Sky, I Free Fall",
-				"Amidst Silenced Stars, I Deep Sleep",
-				"Upon Lighted Fyrefly, I Soon Gaze",
-				"From Undreamt Night, I Thence Shine",
-				"In Finalized Morrow, I Full Bloom",
+				"I wandered lonely as a cloud / That floats on high o'er vales and hills… —— William Wordsworth",
+				"If winter comes, can spring be far behind? —— Percy Bysshe Shelley",
+				"It was the best of times, it was the worst of times… —— Charles Dickens",
+				"The difference between the almost right word and the right word is really a large matter. —— Mark Twain",
+				"There are far, far better things ahead than any we leave behind. —— C. S. Lewis",
+				"Not all those who wander are lost. —— J. R. R. Tolkien",
 			],
 			// 主页横幅副标题字体大小
 			subtitleSize: "1.5rem",
