@@ -42,24 +42,7 @@ try {
 			<div class="mx-0.5 my-2.5 flex gap-x-2 gap-y-2.5 justify-center flex-wrap">
 				&copy; <span id="copyright-year">{currentYear}</span>
 				{profileConfig.name}. All Rights Reserved.
-				<span aria-hidden="false">/</span>
-				<a
-					class="transition link text-(--primary) font-medium"
-					target="_blank"
-					href={url("rss.xml")}>RSS</a
-				>
-				<span aria-hidden="false">/</span>
-				<a
-					class="transition link text-(--primary) font-medium"
-					target="_blank"
-					href={url("atom.xml")}>Atom</a
-				>
-				<span aria-hidden="false">/</span>
-				<a
-					class="transition link text-(--primary) font-medium"
-					target="_blank"
-					href={url("sitemap-index.xml")}>Sitemap</a
-				>
+				<span aria-hidden="true">/</span>
 			</div>
 			<!--
 				注意：请勿随意修改或删除 "Powered by Astro & Firefly" 部分，这是对开源项目的尊重和支持。
